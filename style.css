@@ -1,0 +1,363 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black Background */
+    color: #ffd700; /* Neon Yellow Text */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffd700; /* Neon Yellow */
+    font-size: 22px; /* Increased Font Size */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffd700;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Neon Hover Effect */
+.nav-link:hover {
+    color: #00ffff; /* Neon Blue Hover Effect */
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Neon Glow */
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Heading Styles */
+h2 {
+    font-size: 36px;
+    color: #00ffff; /* Neon Blue for section headings */
+    margin-bottom: 60px;
+}
+
+/* Home Section */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 0 50px;
+    background-color: #000;
+}
+
+.intro-text h1 {
+    font-size: 48px;
+    color: #ffd700; /* Neon Yellow */
+}
+
+.intro-text .name {
+    color: #00ffff; /* Neon Blue */
+}
+
+.intro-text .designation {
+    color: #00ffff; /* Neon Blue */
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #ffd700; /* Neon Yellow */
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ffd700; /* Neon Yellow */
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00ffff; /* Neon Blue Hover */
+    color: white;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+/* About Section Styling */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.about-box, .internship-box {
+    background-color: rgba(0, 0, 0, 0.8); /* Black with some transparency */
+    color: #ffd700; /* Neon Yellow */
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%; /* Make both boxes 45% of the width */
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Neon Blue Glow for both boxes */
+    border: 2px solid #00ffff; /* Neon Blue border */
+}
+
+.internship-box h3 {
+    color: #00ffff; /* Neon Blue for the heading */
+    margin-bottom: 10px;
+}
+
+.internship-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.internship-box li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Skills Section Styles */
+body {
+    background-color: #000; /* Set body background to black */
+}
+
+#skills {
+    background-color: #000; /* Dark gray for the skills section */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards */
+}
+
+.skill-card {
+    position: relative;
+    width: 250px; /* Adjust width as needed */
+    height: 300px; /* Fixed height for consistency */
+    perspective: 1000px; /* Perspective for the flip effect */
+    border: 2px solid transparent; /* Initial border to avoid layout shift */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.skill-card:hover {
+    border-color: #00ffff; /* Neon blue border on hover */
+    box-shadow: 0 0 20px #00ffff; /* Glowing effect on hover */
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.skill-card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when facing front */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    color: #ffd700; /* Neon yellow color */
+}
+
+.card-front {
+    background-color: #000; /* Front color */
+}
+
+.card-back {
+    background-color: #000; /* Back color */
+    transform: rotateY(180deg); /* Hide back initially */
+}
+
+/* Skill Title Style */
+.skill-title {
+    font-size: 1.5em; /* Adjust font size */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards */
+}
+
+.project-card {
+    position: relative;
+    width: 250px; /* Adjust width as needed */
+    height: 300px; /* Fixed height for consistency */
+    perspective: 1000px; /* Perspective for the flip effect */
+    border: 2px solid transparent; /* Initial border to avoid layout shift */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.project-card:hover {
+    border-color: #00ffff; /* Neon blue border on hover */
+    box-shadow: 0 0 20px #00ffff; /* Glowing effect on hover */
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.project-card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when facing front */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    color: #ffd700; /* Neon yellow color */
+}
+
+.card-front {
+    background-color: #000; /* Front color */
+}
+
+.card-back {
+    background-color: #000; /* Back color */
+    transform: rotateY(180deg); /* Hide back initially */
+}
+
+.project-title {
+    font-size: 1.5em; /* Adjust font size */
+    margin-bottom: 10px; /* Space below title */
+}
+.project-link {
+    color: #00ffff; /* Neon blue color */
+    text-decoration: none; /* Remove underline */
+    margin-top: 10px; /* Space above the link */
+    font-size: 1.1em; /* Font size for the link */
+    transition: text-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.project-link:hover {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ffd700; /* Glow effect on hover */
+}
+
+
+/* Contact Section */
+#contact p {
+    font-size: 18px;
+    color: #00ffff; /* Neon Blue */
+}
+
+#contact a {
+    color: #ffd700; /* Neon Yellow for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: text-shadow 0.3s ease; /* Smooth transition for text-shadow */
+    position: relative; /* Positioning for the outline effect */
+}
+
+#contact a::after {
+    content: ""; /* Empty content for the outline */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1; /* Behind the text */
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+#contact a:hover {
+    color: #ffd700; /* Maintain the same color on hover */
+}
+
+#contact a:hover::after {
+    background-color: #00ffff; /* Neon Blue outline on hover */
+    opacity: 0.7; /* Optional: Slight opacity for a glowing effect */
+}
+
+
+
+/* Back to Top Arrow */
+.back-to-top {
+    position: fixed;
+    bottom: 30px; /* Adjusted for better visibility */
+    right: 30px; /* Adjusted for better visibility */
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly dark background for contrast */
+    padding: 12px; /* Increased padding for a larger click area */
+    border-radius: 50%; /* Circular shape */
+    box-shadow: 0 0 15px #ffd700, 0 0 25px #ffd700; /* Neon yellow glow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
+    z-index: 100; /* Ensure it stays above other elements */
+}
+
+.back-to-top a {
+    color: #ffd700; /* Neon Yellow for the arrow */
+    font-size: 28px; /* Slightly larger font size for better visibility */
+    text-decoration: none; /* Remove underline from links */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.back-to-top a:hover {
+    color: #00ffff; /* Change to Neon Blue on hover */
+    box-shadow: 0 0 30px #00ffff, 0 0 40px #00ffff; /* Enhanced glow effect in blue */
+    transform: scale(1.1); /* Slight scale effect on hover for emphasis */
+}
